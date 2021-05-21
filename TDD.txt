@@ -1,0 +1,22 @@
+TDD Done the right way
+
+1. design an interface with many functions
+	Craft method signtures
+		name of the method, the types it takes in, the order the parameters, what it returns
+
+2. Write tests that would prove those functions work as intended
+	a. They serve as a way to test functionality
+	b. Making you use the functions to see if they are intuitive to use as designed
+	c. Are there any edge cases or weird inputs you might not have considered
+		edge cases are inputs that are uncommon or might be troublesome
+		a good example is 0.
+
+3. Write the implementation
+	fill out the funcitons
+
+4. Keep refining your code until you pass all the test cases
+
+I GUARANTEE YOU THIS WILL APPROACH WILL SAVE YOU TIME!!!!!!!!!
+I WILL NOT HELP YOU DEBUG YOUR PROJECTS UNLESS YOU HAVE TESTS!!!!!
+ONE OF THE BIGGEST PROBLEMS IS NOT FIXING BUGS. IT IS FINDING WHERE THEY COME FROM!!!!
+	
