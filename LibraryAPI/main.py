@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from daos.book_dao_local import BookDaoLocal
 from entities.book import Book
+from exceptions.not_found_exception import ResourceNotFoundError
 from services.book_service_impl import BookServiceImpl
 
 app: Flask = Flask(__name__)
@@ -22,8 +23,11 @@ def create_book():
 
 @app.route("/books/<book_id>", methods = ["GET"])
 def get_book_by_id(book_id: str):
-    book = book_service.retrieve_book_by_id(int(book_id))
-    return jsonify(book.as_json_dict())
+    try:
+        book = book_service.retrieve_book_by_id(int(book_id))
+        return jsonify(book.as_json_dict())
+    except ResourceNotFoundError as e:
+        return str(e), 404
 
 @app.route("/books", methods =["GET"])
 def get_all_books():
@@ -47,8 +51,12 @@ def update_book(book_id: str):
 
 @app.route("/books/<book_id>", methods = ["DELETE"])
 def delete_book(book_id: str):
-    book_service.remove_book(int(book_id))
-    return "Deleted successfully", 200
+    try:
+        book_service.remove_book(int(book_id))
+        return "Deleted successfully", 200
+    except ResourceNotFoundError as e:
+        return "The resource could not be found", 404
+
 
 if __name__ == '__main__':
     app.run()
