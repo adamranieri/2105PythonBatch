@@ -1,0 +1,155 @@
+1 on 1s
+
+=====================================================
+Carlos
+
+do not say 
+list vs set vs tuple? fine said sets allow indexing
+scopes in Python? LEGB good
+creating a dog class with owner and breed. good
+python is a dynamic language? not necessary to delcare data types
+it allows for data coercion? confused it with reassinging followed up with mismtaching data types
+ValueError vs TypeError? typerror occurs when a datatype does not exist
+
+80
+
+=================================================================
+Jamal
+
+actually have somewhat of a computer science background
+recently completed a bootcamp
+
+Python vs Java? Java is more detailed, delcare data types, mentioned dunder methods. Do not say confused on an interview
+__str__? allows introductory string method for an object. If I am understanding it correctly
+create a dictionary and add to a dictionary? not sure. Told me how he does not know
+examples of errors in python? value error. enter number and put a letter
+command to install something? said python still very new
+lgb? 
+
+55
+Terrible confidence.
+
+=================================================================
+Boston
+
+
+
+about self: good
+high level features of Python? strongly typed do not declare the types
+Strings? immutable datatype. 
+differences between list and set? good
+tuple? good
+common errors? semi colon? typeeror cannot remember
+importing? good
+class variable? fine
+instance varialbe? cannot remember
+*args?fine though said list
+
+75
+===============================================================
+Amin
+
+I am certified. Did not say in want
+about Python? good got a but into flask
+create a class dog? with instance variables
+__str__? fine
+I got a value error what does that mean? good
+importing? good
+
+
+90 mostly soft skills. Sees to know Java very well
+================================================================
+Areesh
+
+Python at high level? good
+type annotations? good
+got back a type error? good
+class Car instance variable? good
+self? reference for that variable
+*args? okay
+TDD? good
+dicitonary in python? good, key has to be in quotes
+scopes? good
+built-in? good
+set vs list? good
+strings? good
+
+95 Very good technically and soft skills
+=================================================================
+
+Sayed
+
+==================================================================
+Mohammad
+
+list vs set vs tuple? good
+scopes in Python? LEGB
+make constructor? good
+make class variable? took a little help but got there
+typeerror okay? fine
+Type Annotations? good
+in except we put raise? not right
+
+80 could speak a little more fluently but did fine.
+
+=================================================================
+
+Rob Taylor
+
+introduce self.
+C++ vs Python? good
+type annotations in Python? okay
+python dictionary? key value pairs
+lists vs sets? lists you can iterate through
+PyPi? repo for python packages
+how to download a package? pip install believe it comes with PyCharm
+**kwargs? good
+__init__? good __ to make it private?
+raise error? good
+
+Overall excellent
+95 possible internally
+
+===========================================================
+Weston 
+
+Mentioned Angular and node in intro. Knew what he was talking about
+
+JS vs Python? good
+package.json? good
+collections in Python? good
+Python is a interprative language? good
+NameError? good
+strings in Python? Good
+how would I iterate over an array? good?
+TypeAnnotations? good
+How would I make custom Exception in Python
+
+95
+Very good
+
+=============================================================
+Sayed Lofty
+
+About me? good
+
+about Python? automatic memory managament, interpreted language
+exception handling? okay
+custom exception? inherit from exception class
+scopes in Python? good
+string? immutable, create and cannot alter
+PyPi? main packages came in 
+install from PyPi? pip install Flask or whatever you want to install
+create constructor? fine 
+importing? good
+if a function gave me a valueError? maybe put in 0
+TypeError? wrong type
+
+
+I think his english and connection makes him hard to understand
+75
+
+
+
+
+

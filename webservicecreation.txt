@@ -1,0 +1,46 @@
+We have been hired to create a RESTful web service to keep track of books in a local community library.
+- The library works on an honor system (We are not keeping track of who checked out what or handing out late fines etc...)
+- Anyone can donate a book 
+- Anyone can check out a book
+
+General tips
+1. Use type annotations anytime you define a function
+2. Use objects and classes whenever you can. (code is more readable and easier to refactor)
+
+YOU WILL BE USING TDD to develop every part of this applicaiton
+1. Interface
+2. Tests
+3. Implementation
+
+
+1. Identify what Resources you are keeping track/ managing
+	- In this case it is books
+2. Create an ENTITY class
+	- An entity is an object that is designed to be saved somewhere	
+	- These classes rarely contain complex logic
+	- The fields of the class are a convienient way of storing and moving information in our project
+	- AN ENTITY MUST have some field that serves as an ID
+
+3. Create A DAO for EACH entity class. 
+	- DAO (Data Access Object)
+	- A class that is responsible for peristing information on that entity
+		- How that information gets persisted is up to the developers
+		- Normally database but could be anythinig
+			- Text file, NoSQL database, JPEG, 
+		- We are using an python dictionary in memory to persist information
+			- Very common when developing applications but in not in finished applications
+	- A DAO should support the basic CRUD operation
+		- CREATE
+		- READ
+		- UPDATE
+		- DELETE
+4. Create Services. Services do NOT have to be a perfect 1 to 1 with an entity
+	- Services are responsible for Business logic
+		- Application specific rules
+			ex - Books are checked out with a 2 week return date
+			- One copy of a book has to always be in the library
+	- Generally two types of methods in your service
+		- Wrapper methods (contain little logic and just call your DAO)
+			- In general these wrapper methods do not need to be tested
+		- Business logic methods which DO have logic			- 
+
