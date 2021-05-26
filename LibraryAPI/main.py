@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from daos.book_dao_local import BookDaoLocal
+from daos.book_dao_postgres import BookDaoPostgres
 from entities.book import Book
 from exceptions.not_found_exception import ResourceNotFoundError
 from services.book_service_impl import BookServiceImpl
@@ -11,7 +11,7 @@ app: Flask = Flask(__name__)
 # Parsing and generating JSONs, giving back status codes as appropriate
 # They SHOULD NOT be directly responsible for CRUD operations or Bussiness Logic
 # Your Handler should use services. THEY SHOULD NOT uses DAOs directly
-book_dao = BookDaoLocal()
+book_dao = BookDaoPostgres()
 book_service = BookServiceImpl(book_dao) # Dependency Injection
 
 @app.route("/books", methods = ["POST"])

@@ -1,8 +1,9 @@
 from daos.book_dao import BookDAO
 from daos.book_dao_local import BookDaoLocal
+from daos.book_dao_postgres import BookDaoPostgres
 from entities.book import Book
 
-book_dao: BookDAO = BookDaoLocal()
+book_dao: BookDAO = BookDaoPostgres()
 # An entity that HAS NOT BEEN SAVED should have an ID of 0
 # this is a well established convention in every tech stack
 # Many application store date information as the unix epoch

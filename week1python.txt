@@ -150,6 +150,82 @@ I think his english and connection makes him hard to understand
 75
 
 
+============================================================
+Wolf
+
+about me? good
+compare and contrast Java to Python? Java can cast objects, interpreted, compiling?
+when would I use a tuple vs list? good
+**kwargs? good
+dictionaries in python? good,no key duplicates
+importing good?
+how to get new packages? pip install
+write and run tests with pytest? good
+IDE vs text editor? good
+what is a JSON? formatted string on a web server
+GETs are for what? retrieval
+do class inheritance in Python? good
+function vs method? good
+
+95
+=============================================================
+
+Eric Summinski
+
+about me? good
+programming languages you are familiar with? Went immediately into Python high level stuff. Very good but felt rehearsed
+collection for deck of cards? set
+Python inheritance? good
+multiple inheritance? it does have multiple inheritance
+constructor in python? good manageged how  you cannot overload
+self in python? very good
+default arguments in python? good
+are there private variables in Python? fine
+http status codes? good
+
+
+95
+=============================================================
+
+Isaac 
+
+about me? good
+programming languages familiar with? Java Python
+Python? fine, 
+what does it mean to execute line by line? JIT
+*args? fine
+Python have null? None
+Type Annotations? good
+self? okay?
+ideal collection for a phonebook? set because no duplicate phone numbers, followed up with dictionary, might work also other way around
+default argument for a function? okay
+dunder methods? __str__ printing out relavent infomration that is relavent.
+IDE vs text editor? IDE has more tools
+get some software that someone else wrote? pip install that package
+import a specific function? good
+HTTP status codes? 100s information, 200s correct, 300 redirects, 400 user  errors, 500 server errors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
