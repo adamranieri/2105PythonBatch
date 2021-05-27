@@ -49,3 +49,8 @@
             |player_id|attempted|made|shooting_percentage|
             |---------|---------|----|-------------------|
             |101      |200      |50  | 25                |
+
+- 3NF
+    - In 2NF
+    - No Transitive depenedencies
+        - You cannot find the data elsewhere in the database

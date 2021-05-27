@@ -8,8 +8,8 @@ def create_connection():
         conn = connect(
             host= os.environ.get('HOST'), #ranieridb.cyysbedq8cqc.us-east-1.rds.amazonaws.com
             database=os.environ.get('DB_NAME'), #postgres
-            user=os.environ.get('DB_USERNAME'),#awesomepants
-            password=os.environ.get('DB_PASSWORD'),#pa##word
+            user=os.environ.get('DB_USERNAME'),#adam
+            password=os.environ.get('DB_PASSWORD'),#gatorfan1
             port=os.environ.get('PORT')#5432
         )
         return conn

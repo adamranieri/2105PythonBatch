@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import List
 
 from entities.book import Book
 
@@ -24,4 +25,12 @@ class BookService(ABC):
 
     @abstractmethod
     def remove_book(self, book_id: int):
+        pass
+
+    @abstractmethod
+    def find_books_by_tile_containing(self, phrase: str) -> List[Book]:
+        pass
+
+    @abstractmethod
+    def checkout_book(self, book_id: int) -> bool:
         pass
