@@ -1,0 +1,10 @@
+td {
+    color: orange;
+}
+
+.champ {
+    color: orchid;
+}
+thead.champ{
+    color: seagreen;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- A good web page should start with doctype.
+Lets the browser know FOR CETAIN this is HTML 5. Browsers are vert fault tolerant. Even if
+your code is wrong the browser will insert tags or take guesses to try and make it work -->
+<html>
+<!-- html is the ROOT tag. All other html tags in your web page go in here -->
+<head>
+    <!-- will contain meta information. things like look up tags for search. include css
+    and links to exeternal files -->
+    <title>Gator Football</title>
+    <style>
+        /**selector  {key:value} called properties in CSS */
+        b {color: firebrick;}
+        p {color: cadetblue; background-color:dimgrey;}
+        /** select by the ID of an element*/
+        #tebow {color:blue}
+    </style>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- most of your HTML will go in the body tag. The actual content of the web page goes here. -->
+    
+    <h1 style="color: rebeccapurple;">Gator Football</h1>
+    <p>The Gators are the football for the <b>University of Florida</b>. They play in the SEC (South Eastern Conference)
+    There biggest rivals are FSU, UGA and LSU. The university is known for Inventing the drink
+    <b style="color: gold;">Gatorade</b>.
+    </p>
+    <hr>
+
+    <h3 style="color: rgba(54, 131, 44, 0.911);">Heisman Winners</h3>
+    <ul>
+        <li class="champ">Steve Spurrier</li>
+        <li>Danny Wuerffel</li>
+        <li id="tebow">Tim Tebow</li>   
+    </ul>
+
+    <h3 class="champ">National Championships</h3>
+    <table>
+        <thead class="champ"><th>Opponent</th><th>Year</th></thead>
+        <tbody>
+            <tr><td>FSU</td><td>1996</td></tr>
+            <tr><td>Oklahoma</td><td>2006</td></tr>
+            <tr><td class="champ">Ohio State</td><td>2008</td></tr>
+        </tbody>
+    </table>
+
+    <!-- alt is a description of image to show if it does not load -->
+    <img  height="20%" width="25%" src="football.jpg" alt="Gator football player running"/>
+
+</body>
+
+</html>

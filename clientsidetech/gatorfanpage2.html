@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Gator Football</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <style>
+        p {font-family: 'Henny Penny', cursive;}
+        .grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr 0.5fr 1.3fr 1fr;
+  grid-template-rows: 0.5fr 0.6fr 0.3fr 2.7fr 0.6fr 1.3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . ."
+    ". Intro Intro Intro ."
+    ". . . . ."
+    ". championships . hesimanlist ."
+    ". . . . ."
+    ". footballimage footballimage footballimage .";
+}
+
+.Intro { grid-area: Intro; }
+
+.championships { grid-area: championships; }
+
+.hesimanlist { grid-area: hesimanlist; }
+
+.footballimage { grid-area: footballimage; }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="Intro">
+            <h1 >Gator Football</h1>
+            <p>The Gators are the football for the <b>University of Florida</b>. They play in the SEC (South Eastern Conference)
+            There biggest rivals are FSU, UGA and LSU. The university is known for Inventing the drink
+            <b>Gatorade</b>.
+            </p>
+        </div>
+        <div class="championships">
+            <h3 >National Championships</h3>
+            <table class="table table-hover">
+                <thead><th>Opponent</th><th>Year</th></thead>
+                <tbody>
+                    <tr><td>FSU</td><td>1996</td></tr>
+                    <tr><td>Oklahoma</td><td>2006</td></tr>
+                    <tr><td >Ohio State</td><td>2008</td></tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="hesimanlist">
+            <h3 >Heisman Winners</h3>
+            <ul  class="list-group">
+                <li >Steve Spurrier</li>
+                <li>Danny Wuerffel</li>
+                <li >Tim Tebow</li>   
+            </ul>
+        </div>
+       
+
+</body>
+
+</html>
