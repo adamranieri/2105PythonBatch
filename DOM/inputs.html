@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Greeter</title>
+</head>
+<body>
+    <input type="text" id="nameInput">
+    <button onclick="greet()">Get Greeted</button>
+    <h1 id="greeterHeading">Hello Random person</h1>
+    
+</body>
+<script>
+    const input = document.getElementById("nameInput");
+    const greeterHeading = document.getElementById("greeterHeading")
+
+    // Functions that edit the DOM do not return anything
+    // they just DO something on the page
+    function greet(){       
+        const name = input.value;       
+        greeterHeading.innerHTML = `Hello ${name}`
+    }
+
+</script>
+</html>

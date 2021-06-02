@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Super Awesome Note Tracker</h1>
+
+    <input id="taskInput" type="text">
+    <button onclick="addTask()">Add Task</button>
+
+    <h3>Tasks</h3>
+    <ul id="taskList">
+
+    </ul>
+    
+</body>
+<script>
+    const taskList = document.getElementById("taskList");
+    const taskInput = document.getElementById("taskInput");
+    // const tasks = []
+
+    function addTask(){
+        // tasks.push(taskInput.value)
+        taskList.innerHTML = taskList.innerHTML + `<li> ${taskInput.value} </li>`
+        //taskList.innerHTML = tasks.map(t=>`<li>${t}</li>`).join("")
+        taskInput.value = ""
+    }
+
+</script>
+</html>

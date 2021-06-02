@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+</head>
+<body>
+    <button id="helloBtn">Hello!!!!</button>
+    <h1 id="greetHeading" >You have not clicked on hello</h1>
+
+</body>
+<script>
+
+    function printHello(){
+        console.log("Hello")
+        const heading = document.getElementById("greetHeading")
+        heading.innerHTML = `<i style='color:red'>Hello!!!!</i> you clicked on the button`
+    }
+    const helloBtn = document.getElementById("helloBtn")
+    helloBtn.addEventListener("click",printHello)
+    //addEventListener("event to listen for on the element", function to execute when that happens)
+
+</script>
+</html>

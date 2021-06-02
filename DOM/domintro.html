@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom Intro</title>
+</head>
+<!-- three ways to put JS into our HTML 
+1. inline JS
+2. internal
+3. external reference an outside js file
+-->
+<body>
+    
+    <h1 onclick="alert('INLINE JS')">Inline JS</h1>
+    <h1 onclick="internal()">Internal JS</h1>
+    <h1 onclick="external()"> external JS</h1>
+    
+    
+</body>
+<script>
+    function internal(){
+        alert("Internal JS")
+    }
+</script>
+<script src="outside.js"></script>
+</html>
