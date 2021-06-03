@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokedex viewer</title>
+</head>
+<body>
+    <h1>My Pokedex Viewer</h1>
+    <input id="nameInput" type="text">
+    <button onclick="getPokemon()">Get Pokemon</button>
+
+    <table>
+        <thead><th>Name</th><th>Height</th><th>Weight</th></thead>
+        <tbody>
+            <tr id="pokeRow"></tr>
+        </tbody>
+    </table>
+
+    <img id="pokeImage" src="" alt="poke image">
+    
+</body>
+<script>
+    const pokeRow = document.getElementById("pokeRow");
+    const nameInput = document.getElementById("nameInput");
+    const pokeImage = document.getElementById("pokeImage")
+
+    async function getPokemon(){
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameInput.value}`)
+        const pokemon = await response.json()
+        console.log(pokemon)
+        pokeRow.innerHTML = `<td>${pokemon.name}</td><td>${pokemon.height}</td><td>${pokemon.weight}</td>`
+        pokeImage.src = pokemon.sprites.front_default
+    }
+
+</script>
+</html>

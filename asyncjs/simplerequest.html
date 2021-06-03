@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <button onclick="getThatPokemon()">Get Pokemon</button>
+    <button onclick="getThatPokemon2()">Get Pokemon</button>
+    
+</body>
+<script>
+
+// async is a keyword we can put in front of functions
+// this functions calls functions that return promises and make take a while to get the
+// actual thing we want
+    async function getThatPokemon(){
+        // getting an HTTP response can sometimes take a really long time several seconds
+        // it would be a really bad user experience if JS did not work while waiting on this response
+        // fetch DOES NOT return a response it returns a promise
+        // A promise is like an empty object that will one day hold the value we want
+
+        // await is another keyword that 'tells JS to wait for the promise to have a real value' before continuing with the 
+        // rest of code
+        const httpResponse = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");// returns an HTTP response
+        // JS will be able to execute other code while waiting for the promise to become real
+        console.log(httpResponse)
+
+        const body = await httpResponse.json()// returns the body as JSO if it is a JSON
+        console.log(body)
+
+        // when you make an HTTP request you get the headers first
+        // THEN the body
+        // so you have to await for both
+    }
+    // async await is a es6 feature. only been in JS since 2015
+    
+    function getThatPokemon2(){
+        // chaining with callback functions
+        // has the same async non-event queue blocking qualities
+        fetch("https://pokeapi.co/api/v2/pokemon/ditto").then((httpResponse)=>{
+            console.log(httpResponse);
+            return httpResponse.json()
+            }).then((body)=>{
+                console.log(body)
+            })
+    }
+
+    // Allows you to write code that looks synchronous 
+    // However under hood is is asynschonous and non blocking
+    async function getThatPokemon(){
+        const httpResponse = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+        console.log(httpResponse)
+        const body = await httpResponse.json()
+        console.log(body)
+    }
+
+</script>
+</html>

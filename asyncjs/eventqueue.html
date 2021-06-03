@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="longFunc()">Long Function</button>
+    <button onclick="shortFunc()">Short Function</button>
+
+    
+</body>
+<script>
+
+    function longFunc(){
+        for(let i =0; i<999999999*2;i++){
+
+        }
+        console.log("finsihed long function")
+    }
+
+    function shortFunc(){
+        for(let i =0; i<100;i++){
+
+        }
+        console.log("finsihed short function")
+    }
+
+</script>
+</html>
