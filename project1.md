@@ -1,7 +1,7 @@
 # Project 1
 
 ## Expense Reimbursement System
-You are tasked with creting an expense reimbursement system. For a small company/group. This program will allow employees to create reimbursement requests.All Managers can view these requests and approve or deny them. When they approve/deny they
+You are tasked with creating an expense reimbursement system. For a small company/group. This program will allow employees to create reimbursement requests.All Managers can view these requests and approve or deny them. When they approve/deny they
 can optionally leave a message.
 
 ### key features
@@ -11,7 +11,7 @@ can optionally leave a message.
         - Bonus allow for file upload
 - Manager
     - A Manager can view all reimbursements past and pending
-    - A Managager can appove or deny any reimbursement
+    - A Manager can appove or deny any reimbursement
     - Managers can view a 'statistics' page. That includes information like what employee spends the most money, mean expenditure cost etc...
 
 ### Key Notes
