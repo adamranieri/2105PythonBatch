@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h5>Books</h5>
+    <table>
+        <thead><th>Title</th><th>Author</th><th>Condition</th></thead>
+        <tbody id="bookTableBody">  
+        </tbody>
+    </table>
+    
+</body>
+<script>
+    const bookTableBody = document.getElementById("bookTableBody")
+
+    function qualityPipe(quality = 0){
+
+        switch(quality){
+            case 1: return "New";
+            case 2: return "Used";
+            case 3: return "Worn";
+            case 4: return "Rough";
+        }
+
+    }
+
+    async function getAllBooks(){
+        const response = await fetch("http://localhost:5000/books")
+        const books = await response.json()
+        let innerRows = ""
+        for(let book of books){
+            if(book.available){
+                innerRows += `<tr>
+                <td>${book.title}</td>
+                <td>${book.author}</td>
+                <td>${qualityPipe(book.quality)}</td>
+                <td><button onclick="checkoutBook(${book.bookId})">Checkout</button></td>
+                </tr>`
+            }
+        }
+        bookTableBody.innerHTML = innerRows
+    }
+
+    async function checkoutBook(id = 0){
+        const response = await fetch(`http://localhost:5000/books/${id}/checkout`,{method:"PATCH"})
+        if(response.status === 200){
+            alert("Book Successfully checked out")
+            await getAllBooks()
+        }else{
+            alert("Book could not be checked out")
+        }
+
+    }
+
+    getAllBooks()
+
+</script>
+</html>

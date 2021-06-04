@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Book</title>
+</head>
+<body>
+    <h1>New Book Registration</h1>
+    
+
+    <label for="title">Title</label>
+    <input name="title" id="titleInput" type="text" placeholder="Frankenstein">
+
+    <label for="author">Author</label>
+    <input name="author" id="authorInput" type="text" placeholder="Mary Shelley">
+
+    <label for="quailty">Quality</label>
+    <input name="quailty" id="qualityInput" type="number">
+
+    <button onclick="addBook()">Add Book</button>
+
+    
+</body>
+<script>
+    const titleInput = document.getElementById("titleInput")
+    const authorInput = document.getElementById("authorInput")
+    const qualityInput = document.getElementById("qualityInput")
+
+    async function addBook(){
+        // fetch has an optional second parameter that takes in an configuration object
+        // its just an object literal that has certain values
+        const book = {
+            bookId:0,
+            title:titleInput.value,
+            author:authorInput.value,
+            quality:Number(qualityInput.value),
+            returnDate:0,
+            available:true
+        }
+        const config = {
+            method:"POST",
+            headers:{'Content-Type':"application/json"},
+            body: JSON.stringify(book)
+        }
+
+        const response = await fetch("http://localhost:5000/books", config)
+
+        if(response.status === 201){
+            alert("The book was successfully added")
+        }else{
+            alert("Something went wrong :(")
+        }
+
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>openBook</title>
+</head>
+<body>
+    <h1>openBook</h1>
+    <h3>Book Viewer</h3>
+    <a href="checkout.html">Checkout Page</a>
+
+    <p>Mission statement: openBook is a community library dedicated to the open sharing of books.
+        Feel free to browse our selection. We accept all donations. 
+    </p>
+
+    <h5>Books</h5>
+    <table>
+        <thead><th>Title</th><th>Author</th><th>Condition</th><th>Available?</th></thead>
+        <tbody id="bookTableBody">  
+        </tbody>
+    </table>
+
+    <input id="titleInput" type="text" placeholder="The Scarlet Letter">
+    <button onclick="getBooksByTitle()">Search</button>
+    <table>
+        <thead><th>Title</th><th>Author</th><th>Condition</th><th>Available?</th></thead>
+        <tbody id="searchTableBody">  
+        </tbody>
+    </table>
+    
+</body>
+<script>
+    const bookTableBody = document.getElementById("bookTableBody")
+    const searchTableBody = document.getElementById("searchTableBody")
+    const titleInput = document.getElementById("titleInput")
+
+    function qualityPipe(quality = 0){
+
+        switch(quality){
+            case 1: return "New";
+            case 2: return "Used";
+            case 3: return "Worn";
+            case 4: return "Rough";
+        }
+
+    }
+
+    async function getAllBooks(){
+        const response = await fetch("http://localhost:5000/books")
+        const books = await response.json()
+        let innerRows = ""
+        for(let book of books){
+            innerRows += `<tr>
+                <td>${book.title}</td>
+                <td>${book.author}</td>
+                <td>${qualityPipe(book.quality)}</td>
+                <td>${book.returnDate === 0 ? "Yes" : "No"}</td>
+                </tr>`
+        }
+        bookTableBody.innerHTML = innerRows
+    }
+
+    async function getBooksByTitle(){
+        const response = await fetch(`http://localhost:5000/books?title=${titleInput.value}`)
+        const books = await response.json()
+        let innerRows = ""
+        for(let book of books){
+            innerRows += `<tr>
+                <td>${book.title}</td>
+                <td>${book.author}</td>
+                <td>${qualityPipe(book.quality)}</td>
+                <td>${book.returnDate === 0 ? "Yes" : "No"}</td>
+                </tr>`
+        }
+        searchTableBody.innerHTML = innerRows
+    }
+
+    getAllBooks()
+
+</script>
+</html>
