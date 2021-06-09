@@ -43,4 +43,10 @@
             - Then a pop up with a list of speciality pizzas is hown
             - Then the employee is redirected the the order review page
 
+## Cucumber
+- Cucumber is a BDD framework
+1. we write our BDD tests/acceptance criteria in feature files in the Gherkin syntax
+2. we write step implementation for each acceptance criteria step
+3. cucumber will run our acceptance critera and match them to the step implementations
+4. we can execute our acceptance criteria
 
