@@ -25,6 +25,14 @@
 - Gherkin 
     - language/syntax for writing acceptance criteria
     - NOT A PROGRAMMING LANGUAGE
+    - Feature
+        - A brief description of user story (general user story)/ feature
+    - Scenario
+        - A brief descripiton of a more specific user story
+    - Scenario Outline
+        - Like scenario except parameterized
+    - Examples
+        - a table of values for your Scenario Outline
     - Given
         - Some state of the application or user
         - Examples
@@ -42,6 +50,7 @@
         - Examples
             - Then a pop up with a list of speciality pizzas is hown
             - Then the employee is redirected the the order review page
+    
 
 ## Cucumber
 - Cucumber is a BDD framework
@@ -49,4 +58,15 @@
 2. we write step implementation for each acceptance criteria step
 3. cucumber will run our acceptance critera and match them to the step implementations
 4. we can execute our acceptance criteria
-
+- Cucumber has no real link to selenium
+    - You could write cucumber tests for any software application possible
+        - You write the AC in Gherkin
+        - The step implemenations are just Python code to execute
+        - Theoretically you could write AC in Gherkin for a video game and the step implemenation is some really compliced bots set up to play the game
+- Cucumber is peanut butter and Selenium is chocolate
+    - They have no relation to each other BUT work extremely well together
+    - You could use only Pytest and selenium to do front end testing
+        - pytest lacks the nice features of cucumber
+        - No auto generatting test tubs
+        - No automatically ordering and reusing your code
+        - No ability to naturally blend your human AC into step implementations
