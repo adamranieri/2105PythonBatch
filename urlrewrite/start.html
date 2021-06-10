@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Start</title>
+</head>
+<body>
+    <h1>The start page</h1>
+    <a href="end.html?user=Adam">Go to the end page</a>
+    <input type="text"  id="usernameInput">
+    <button onclick="login()">Login and redirect to other page</button>
+    
+</body>
+<script>
+    const usernameInput = document.getElementById("usernameInput")
+    
+
+    function login(){
+        const user = usernameInput.value
+        window.location.href = `end.html?user=${user}` /// URL rewriting is a way to
+        // url rewriting can generate links people can easily save 
+        // track users/sessions
+        // DO NOT EVER PUT SENSITIVE INFORMATION IN A URL
+        localStorage.setItem("name",user)
+
+    }
+
+    
+
+
+</script>
+</html>

@@ -1,0 +1,25 @@
+# Types of Test
+- Unit Test
+    - An atomic test
+    - A test the checks functionality of a SINGLE FUNCTION 
+    - That function SHOULD NOT rely on outside functionality
+    - A service test that uses mocked dependency is a unit test
+- Integration Test
+    - A composite test
+    - A test that requires multiple pieces of functionality to work correctly to pass
+    - A serivce test that is not mocked requires a DAO that works
+    - A function that has to call other other functions that you have written
+- End to End Test E2E
+    - Test an application as an end user
+    - They require the ENTIRE feature to be working in order for the test to pass
+    - Create a book on my web page and see that the book is given an ID and added to my view all books table.
+        - The front-end and the back-end had to be working
+- Automated Test
+    - Any test executed by a machine
+    - Often used in reference to selenium
+    - But applies to any testing framework
+        - JUnit
+        - pytest
+    - goal as a developer is to automate everything you can
+- Manual Test
+    - A test performed directly by a human

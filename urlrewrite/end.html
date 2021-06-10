@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>End</title>
+</head>
+<body>
+    <h1>The end page</h1>
+    
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search)
+    const user = urlParams.get("user")
+    console.log(user)
+    console.log(localStorage.getItem("name"))
+</script>
+</html>
