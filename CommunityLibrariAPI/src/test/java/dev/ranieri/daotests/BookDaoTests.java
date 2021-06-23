@@ -2,6 +2,7 @@ package dev.ranieri.daotests;
 
 import dev.ranieri.daos.BookDAO;
 import dev.ranieri.daos.BookDaoLocal;
+import dev.ranieri.daos.BookDaoPostgres;
 import dev.ranieri.entities.Book;
 import org.testng.annotations.Test;
 import org.testng.Assert;
@@ -11,7 +12,7 @@ import java.util.List;
 public class BookDaoTests {
 
     // Test to the interface
-    static BookDAO bookDAO = new BookDaoLocal();
+    static BookDAO bookDAO = new BookDaoPostgres();
     static Book testBook = new Book(0,"Dracula", "Bram Stoker", true, 1, 0);
 
     @Test(priority = 1)

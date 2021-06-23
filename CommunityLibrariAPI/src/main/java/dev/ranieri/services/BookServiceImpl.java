@@ -16,12 +16,12 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book registerBook(Book book) {
-        return null;
+        return this.bookDAO.createBook(book);
     }
 
     @Override
     public List<Book> retrieveAllBooks() {
-        return null;
+        return this.bookDAO.getAllBooks();
     }
 
     @Override
@@ -45,21 +45,29 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book updateBook(Book book) {
-        return null;
+        return this.bookDAO.updateBook(book);
     }
 
     @Override
     public boolean decommissionBookById(int id) {
-        return false;
+        return this.bookDAO.deleteBookById(id);
     }
 
     @Override
     public Book checkinById(int id) {
-        return null;
+        Book book = this.bookDAO.getBookById(id);
+        book.setAvailable(true);;
+        book.setReturnDate(0);
+        this.bookDAO.updateBook(book);
+        return book;
     }
 
     @Override
     public Book checkoutById(int id) {
-        return null;
+        Book book = this.bookDAO.getBookById(id);
+        book.setAvailable(false);
+        book.setReturnDate(System.currentTimeMillis() + 1_209_600);
+        this.bookDAO.updateBook(book);
+        return book;
     }
 }
