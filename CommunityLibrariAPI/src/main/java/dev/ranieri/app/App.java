@@ -2,7 +2,7 @@ package dev.ranieri.app;
 
 import dev.ranieri.controllers.BookController;
 import dev.ranieri.daos.BookDAO;
-import dev.ranieri.daos.BookDaoLocal;
+import dev.ranieri.daos.BookDaoPostgres;
 import dev.ranieri.services.BookService;
 import dev.ranieri.services.BookServiceImpl;
 import io.javalin.Javalin;
@@ -10,9 +10,15 @@ import io.javalin.Javalin;
 public class App {
 
     public static void main(String[] args) {
-        Javalin app = Javalin.create();
+        Javalin app = Javalin.create(config -> {
+            // optionaally you can pass in a lambda into the create method for extra steps in creating your
+            // Javalin app
+            config.enableCorsForAllOrigins();
+            config.enableDevLogging();
+            
+        });
 
-        BookDAO bookDAO = new BookDaoLocal();
+        BookDAO bookDAO = new BookDaoPostgres();
         BookService bookService = new BookServiceImpl(bookDAO);
         BookController bookController = new BookController(bookService);
 

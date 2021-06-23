@@ -1,6 +1,8 @@
 package dev.ranieri.daos;
 
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.ResourceNotFound;
+
 import java.util.List;
 
 // Proper Interface for our DAO

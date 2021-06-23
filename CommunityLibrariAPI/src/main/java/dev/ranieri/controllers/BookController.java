@@ -3,6 +3,7 @@ package dev.ranieri.controllers;
 
 import com.google.gson.Gson;
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.ResourceNotFound;
 import dev.ranieri.services.BookService;
 import io.javalin.http.Handler;
 
@@ -37,12 +38,19 @@ public class BookController {
     };
 
     public Handler getBookById = ctx -> {
-        int id = Integer.parseInt(ctx.pathParam("id"));
-        Book book = this.bookService.retrieveBookById(id);
-        Gson gson = new Gson();
-        String bookJSON = gson.toJson(book);
-        ctx.result(bookJSON);
-        ctx.status(200); // does default to 200
+        try{
+            int id = Integer.parseInt(ctx.pathParam("id"));
+            Book book = this.bookService.retrieveBookById(id);
+            Gson gson = new Gson();
+            String bookJSON = gson.toJson(book);
+            ctx.result(bookJSON);
+            ctx.status(200); // does default to 200
+
+        }catch (ResourceNotFound resourceNotFound){
+            ctx.result(resourceNotFound.getMessage());
+            ctx.status(404);
+        }
+
 
     };
 

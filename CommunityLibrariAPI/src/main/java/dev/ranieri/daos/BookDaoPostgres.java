@@ -1,6 +1,7 @@
 package dev.ranieri.daos;
 
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.ResourceNotFound;
 import dev.ranieri.utils.ConnectionUtil;
 
 import java.sql.*;
@@ -40,7 +41,8 @@ public class BookDaoPostgres implements BookDAO{
     }
 
     @Override
-    public Book getBookById(int id) {
+    public Book getBookById(int id) { // adding throws to the method signature
+        // requires that your inteface be updated
         try(Connection connection = ConnectionUtil.createConnection()) {
             String sql = "select * from book where book_id = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
@@ -48,6 +50,8 @@ public class BookDaoPostgres implements BookDAO{
 
             ResultSet rs = ps.executeQuery();
             rs.next();
+
+
             Book book = new Book();
             book.setBookId(rs.getInt("book_id"));
             book.setTitle(rs.getString("title"));
@@ -60,7 +64,7 @@ public class BookDaoPostgres implements BookDAO{
 
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
-            return null;
+            throw new ResourceNotFound("The resource with the id of " + id +" could not be found" );
         }
 
     }

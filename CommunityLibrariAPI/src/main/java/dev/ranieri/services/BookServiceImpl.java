@@ -2,6 +2,7 @@ package dev.ranieri.services;
 
 import dev.ranieri.daos.BookDAO;
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.ResourceNotFound;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book retrieveBookById(int id) {
+    public Book retrieveBookById(int id) throws ResourceNotFound {
         return this.bookDAO.getBookById(id);
     }
 
@@ -54,7 +55,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book checkinById(int id) {
+    public Book checkinById(int id) throws ResourceNotFound {
         Book book = this.bookDAO.getBookById(id);
         book.setAvailable(true);;
         book.setReturnDate(0);
@@ -63,7 +64,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book checkoutById(int id) {
+    public Book checkoutById(int id) throws ResourceNotFound {
         Book book = this.bookDAO.getBookById(id);
         book.setAvailable(false);
         book.setReturnDate(System.currentTimeMillis() + 1_209_600);

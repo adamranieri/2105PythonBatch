@@ -1,6 +1,7 @@
 package dev.ranieri.services;
 
 import dev.ranieri.entities.Book;
+import dev.ranieri.exceptions.ResourceNotFound;
 
 import java.util.List;
 
