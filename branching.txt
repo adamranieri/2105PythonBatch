@@ -1,0 +1,14 @@
+
+1. Create a skeleton project on the main branch
+2. to add a feature make a new branch off of main for that feature
+3. add your code and tests to that branch
+	- git checkout scorehandlers
+4. push your code up to github
+5. request a merge
+6. Have someone else look over the merge request
+7a. It looks good and the code is merged into the main branch
+7b. Deficient and rejected
+if it is rejected you should close the merge request.make the edits
+and then make another merge request
+
+pull request merge request are synonymous terms
