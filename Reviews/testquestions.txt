@@ -1,0 +1,27 @@
+Positive and negative tests for a form?
+Most common test?
+What type are are test are unit tests?
+White box versus black box testing?
+Examples of black box?
+High Priortity vs High Severity?
+What is quality assurance? 
+Automated vs manual test?
+Alpha vs Beta testing?
+Functional testing vs Performance testing? 
+Types of Performance testing?
+Regression testing vs Retesting?
+Defect lifecycle?
+reasons to reject working on a bug? 
+Behavior vs state verification?
+Set up Selenium and cucumber in Java?
+Why use runner files?
+Constraints of REST?
+STLC?
+Test plan vs Test Strategy?
+SDLC?
+Waterfall vs agile?
+Can you do agile?
+Can do to be agile?
+roles in scrum?
+sprints in Scrum?
+Test strategy vs Test plan
