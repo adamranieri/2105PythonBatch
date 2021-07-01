@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTests" verbose="1" >
+    <test name="dao tests">
+        <classes>
+            <class name="dev.ranieri.daotests.BookDaoTests"></class>
+        </classes>
+    </test>
+    <test name="service tests">
+        <classes>
+            <class name="dev.ranieri.servicetests.BookServiceTests"></class>
+        </classes>
+    </test>
+</suite>

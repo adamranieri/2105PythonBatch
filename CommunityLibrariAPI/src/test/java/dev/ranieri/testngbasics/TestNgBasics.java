@@ -27,11 +27,11 @@ public class TestNgBasics {
         System.out.println("Hello");
     }
 
-    @Test(priority = 2)
-    void a(){
-        System.out.println("Will fail");
-        throw new RuntimeException("EpicFail");
-    }
+//    @Test(priority = 2)
+//    void a(){
+//        System.out.println("Will fail");
+//        throw new RuntimeException("EpicFail");
+//    }
 
     @Test(priority = 3)
     void b(){

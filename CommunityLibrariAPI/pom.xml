@@ -56,6 +56,9 @@
     <properties>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
+        <sonar.projectKey>adamranieri_CommunityLibrary</sonar.projectKey>
+        <sonar.organization>adamranieri-github</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
 </project>
