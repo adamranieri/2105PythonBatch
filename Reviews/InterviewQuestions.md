@@ -85,6 +85,8 @@ These are questions you ***NEED*** to be able to answer.
     - How do I click on a button?
     - What is Xpath?
     - Absolute vs Relative Xpath?
+    - What are waits?
+    - Explicit vs implicit wait?
 - **BDD** 
     - What is BDD?
     - What is the the general workflow of BDD?
