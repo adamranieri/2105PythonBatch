@@ -22,7 +22,7 @@ can optionally leave a message.
     - Passwords do not have to be encrpted
 
 ### Technical and testing requirements
-- Backend developed in Flask
+- Backend developed in Javalin
 - Backend should be a RESTful web service
     - You may have to a make a non-REST compliant endpoint for login. This is normal.
 - AWS postgres RDS used to persist information
